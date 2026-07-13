@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PB — Gestor de Turnos</title>
+
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__logo">
+        <span class="logo-text">PB</span>
+        <span class="logo-sub">PACEBOOK</span>
+      </div>
+      <nav class="header__nav">
+        <button class="nav-btn active" data-section="reservar">Reservar turno</button>
+        <button class="nav-btn" data-section="mis-turnos">Mis turnos</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- SECCIÓN: RESERVAR -->
+    <section id="section-reservar" class="section active">
+
+      <div class="section-header">
+        <h1 class="section-title">Reservá tu clase</h1>
+        <p class="section-subtitle">Elegí el servicio, la fecha y el horario disponible.</p>
+      </div>
+
+      <!-- PASO 1: Servicios -->
+      <div class="step">
+        <p class="step-label">01 — Elegí una disciplina</p>
+        <div id="servicios-grid" class="servicios-grid">
+          <!-- se renderizan con JS -->
+        </div>
+      </div>
+
+      <!-- PASO 2: Fecha -->
+      <div class="step" id="step-fecha" style="display:none">
+        <p class="step-label">02 — Elegí una fecha</p>
+        <input type="date" id="input-fecha" class="input-fecha" />
+      </div>
+
+      <!-- PASO 3: Horarios -->
+      <div class="step" id="step-horarios" style="display:none">
+        <p class="step-label">03 — Elegí un horario</p>
+        <div id="horarios-grid" class="horarios-grid">
+          <!-- se renderizan con JS -->
+        </div>
+      </div>
+
+      <!-- PASO 4: Datos del usuario -->
+      <div class="step" id="step-datos" style="display:none">
+        <p class="step-label">04 — Tus datos</p>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="input-nombre">Nombre completo</label>
+            <input type="text" id="input-nombre" class="input-field" placeholder="Ej: Ana García" />
+          </div>
+          <div class="form-group">
+            <label for="input-email">Email</label>
+            <input type="email" id="input-email" class="input-field" placeholder="Ej: ana@email.com" />
+          </div>
+        </div>
+        <button id="btn-confirmar" class="btn-primary">Confirmar reserva</button>
+      </div>
+
+    </section>
+
+    <!-- SECCIÓN: MIS TURNOS -->
+    <section id="section-mis-turnos" class="section">
+      <div class="section-header">
+        <h1 class="section-title">Mis turnos</h1>
+        <p class="section-subtitle">Tus reservas activas. Podés cancelar en cualquier momento.</p>
+      </div>
+      <div id="mis-turnos-container">
+        <!-- se renderizan con JS -->
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
