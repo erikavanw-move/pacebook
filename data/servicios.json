@@ -4,27 +4,31 @@
     "nombre": "Running",
     "descripcion": "Mejorá tu técnica de carrera con entrenadores especializados.",
     "duracion": 60,
-    "icono": "🏃"
+    "icono": "🏃",
+    "imagen": "img/running.jpg"
   },
   {
     "id": 2,
     "nombre": "Funcional",
     "descripcion": "Entrenamiento de fuerza y resistencia con peso corporal.",
     "duracion": 45,
-    "icono": "💪"
+    "icono": "💪",
+    "imagen": "img/funcional.jpg"
   },
   {
     "id": 3,
     "nombre": "Trail Running",
     "descripcion": "Preparación física y técnica para correr en montaña.",
     "duracion": 90,
-    "icono": "⛰️"
+    "icono": "⛰️",
+    "imagen": "img/trailrunning.jpg"
   },
   {
     "id": 4,
     "nombre": "Streching",
     "descripcion": "Recuperación activa y movilidad para runners.",
     "duracion": 30,
-    "icono": "🧘"
+    "icono": "🧘",
+    "imagen": "img/streching.jpg"
   }
 ]

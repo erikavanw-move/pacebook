@@ -154,48 +154,95 @@ body {
 =========================== */
 .servicios-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
 
+@media (max-width: 560px) {
+  .servicios-grid { grid-template-columns: 1fr; }
+}
+
 .servicio-card {
-  background: var(--color-surface);
+  position: relative;
+  height: 220px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  padding: 1.25rem;
   cursor: pointer;
+  overflow: hidden;
   transition: var(--transition);
 }
 
-.servicio-card:hover {
-  border-color: var(--color-accent);
-  transform: translateY(-2px);
+/* Imagen de fondo */
+.servicio-card__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease;
+}
+
+/* Overlay oscuro */
+.servicio-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.58);
+  transition: background 0.3s ease;
+  z-index: 1;
+}
+
+.servicio-card:hover .servicio-card__bg {
+  transform: scale(1.05);
+}
+
+.servicio-card:hover::after {
+  background: rgba(0, 0, 0, 0.42);
 }
 
 .servicio-card.selected {
   border-color: var(--color-accent);
-  background: rgba(200, 241, 53, 0.07);
+  box-shadow: 0 0 0 2px var(--color-accent);
 }
 
-.servicio-card__icono { font-size: 2rem; margin-bottom: 0.75rem; }
+.servicio-card.selected::after {
+  background: rgba(13, 20, 0, 0.62);
+}
+
+/* Contenido encima de la imagen */
+.servicio-card__content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.servicio-card__icono {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
 
 .servicio-card__nombre {
-  font-weight: 600;
-  font-size: 0.95rem;
-  margin-bottom: 0.3rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
 }
 
 .servicio-card__desc {
   font-size: 0.8rem;
-  color: var(--color-muted);
+  color: rgba(240, 240, 240, 0.7);
   line-height: 1.4;
 }
 
 .servicio-card__duracion {
-  margin-top: 0.75rem;
+  margin-top: 0.6rem;
   font-size: 0.75rem;
   color: var(--color-accent);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* ===========================

@@ -89,10 +89,13 @@ function renderServicios() {
     .map(
       (s) => `
     <div class="servicio-card" data-id="${s.id}">
-      <div class="servicio-card__icono">${s.icono}</div>
-      <div class="servicio-card__nombre">${s.nombre}</div>
-      <div class="servicio-card__desc">${s.descripcion}</div>
-      <div class="servicio-card__duracion">⏱ ${s.duracion} min</div>
+      <div class="servicio-card__bg" style="background-image: url('${s.imagen}')"></div>
+      <div class="servicio-card__content">
+        <div class="servicio-card__icono">${s.icono}</div>
+        <div class="servicio-card__nombre">${s.nombre}</div>
+        <div class="servicio-card__desc">${s.descripcion}</div>
+        <div class="servicio-card__duracion">⏱ ${s.duracion} min</div>
+      </div>
     </div>
   `
     )
