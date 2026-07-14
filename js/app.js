@@ -1,7 +1,3 @@
-// ============================================================
-// PB — Gestor de Turnos
-// app.js
-// ============================================================
 
 // Estado global de la app
 const estado = {
@@ -15,9 +11,7 @@ const estado = {
   },
 };
 
-// ============================================================
 // INICIALIZACIÓN
-// ============================================================
 
 async function init() {
   try {
@@ -36,9 +30,7 @@ async function init() {
   }
 }
 
-// ============================================================
 // CARGA DE DATOS (Fetch)
-// ============================================================
 
 async function cargarDatos() {
   const [serviciosRes, horariosRes] = await Promise.all([
@@ -54,9 +46,7 @@ async function cargarDatos() {
   estado.reservas = guardadas ? JSON.parse(guardadas) : [];
 }
 
-// ============================================================
 // NAVEGACIÓN
-// ============================================================
 
 function setupNavegacion() {
   const botones = document.querySelectorAll(".nav-btn");
@@ -78,9 +68,7 @@ function setupNavegacion() {
   });
 }
 
-// ============================================================
 // PASO 1 — SERVICIOS
-// ============================================================
 
 function renderServicios() {
   const grid = document.getElementById("servicios-grid");
@@ -130,9 +118,7 @@ function seleccionarServicio(id) {
   document.getElementById("input-fecha").value = "";
 }
 
-// ============================================================
 // PASO 2 — FECHA
-// ============================================================
 
 function setupFecha() {
   const inputFecha = document.getElementById("input-fecha");
@@ -151,9 +137,7 @@ function setupFecha() {
   });
 }
 
-// ============================================================
 // PASO 3 — HORARIOS
-// ============================================================
 
 function renderHorarios() {
   const { servicio, fecha } = estado.seleccion;
@@ -212,9 +196,7 @@ function seleccionarHorario(id) {
   document.getElementById("step-datos").style.display = "block";
 }
 
-// ============================================================
 // PASO 4 — CONFIRMAR RESERVA
-// ============================================================
 
 function setupConfirmar() {
   document.getElementById("btn-confirmar").addEventListener("click", () => {
@@ -382,9 +364,7 @@ function cancelarTurno(id) {
   });
 }
 
-// ============================================================
 // HELPERS
-// ============================================================
 
 function guardarReservas() {
   localStorage.setItem("pb_reservas", JSON.stringify(estado.reservas));
@@ -415,8 +395,6 @@ function formatearFecha(fechaStr) {
   return `${dias[fecha.getDay()]} ${dia} ${meses[mes - 1]} ${anio}`;
 }
 
-// ============================================================
 // ARRANQUE
-// ============================================================
 
 document.addEventListener("DOMContentLoaded", init);

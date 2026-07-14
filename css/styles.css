@@ -1,6 +1,4 @@
-/* ===========================
-   TOKENS
-=========================== */
+/* TOKENS */
 :root {
   --color-bg:        #0d0d0d;
   --color-surface:   #1a1a1a;
@@ -18,9 +16,7 @@
   --transition: 0.2s ease;
 }
 
-/* ===========================
-   RESET & BASE
-=========================== */
+/* RESET & BASE */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -30,9 +26,7 @@ body {
   min-height: 100vh;
 }
 
-/* ===========================
-   HEADER
-=========================== */
+/* HEADER */
 .header {
   border-bottom: 1px solid var(--color-border);
   position: sticky;
@@ -102,9 +96,7 @@ body {
   color: var(--color-accent);
 }
 
-/* ===========================
-   MAIN & SECTIONS
-=========================== */
+/* MAIN & SECTIONS*/
 .main {
   max-width: 900px;
   margin: 0 auto;
@@ -129,9 +121,7 @@ body {
   font-size: 0.95rem;
 }
 
-/* ===========================
-   STEPS
-=========================== */
+/* STEPS */
 .step {
   margin-bottom: 2.5rem;
   animation: fadeIn 0.3s ease;
@@ -150,9 +140,7 @@ body {
   margin-bottom: 1rem;
 }
 
-/* ===========================
-   SERVICIOS GRID
-=========================== */
+/* SERVICIOS GRID */
 .servicios-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -246,9 +234,7 @@ body {
   font-weight: 600;
 }
 
-/* ===========================
-   FECHA INPUT
-=========================== */
+/* FECHA INPUT */
 .input-fecha {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -264,9 +250,7 @@ body {
 
 .input-fecha:focus { border-color: var(--color-accent); }
 
-/* ===========================
-   HORARIOS GRID
-=========================== */
+/* HORARIOS GRID */
 .horarios-grid {
   display: flex;
   flex-wrap: wrap;
@@ -308,9 +292,7 @@ body {
 
 .horario-btn.selected .horario-btn__info { color: #333; }
 
-/* ===========================
-   FORM
-=========================== */
+/* FORM */
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -351,9 +333,7 @@ body {
 .input-field:focus { border-color: var(--color-accent); }
 .input-field::placeholder { color: var(--color-muted); }
 
-/* ===========================
-   BOTONES
-=========================== */
+/* BOTONES */
 .btn-primary {
   background: var(--color-accent);
   color: #000;
@@ -384,9 +364,7 @@ body {
 
 .btn-danger:hover { background: rgba(255,77,77,0.1); }
 
-/* ===========================
-   MIS TURNOS
-=========================== */
+/* MIS TURNOS */
 .turnos-lista {
   display: flex;
   flex-direction: column;
@@ -440,7 +418,7 @@ body {
 .empty-state__title { font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--color-text); }
 .empty-state__text { font-size: 0.9rem; }
 
-/* SweetAlert2 custom theme */
+/* SweetAlert2 */
 .swal2-popup {
   background: #1a1a1a !important;
   color: #f0f0f0 !important;
@@ -460,9 +438,7 @@ body {
   color: #888 !important;
 }
 
-/* ===========================
-   FOOTER
-=========================== */
+/* FOOTER */
 .footer {
   border-top: 1px solid var(--color-border);
   margin-top: 4rem;
