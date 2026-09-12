@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Running",
+    "description": "Mejorá tu técnica de carrera con entrenadores especializados.",
+    "duration": 60,
+    "price": 5500,
+    "category": "cardio",
+    "available": true
+  },
+  {
+    "id": 2,
+    "name": "Funcional",
+    "description": "Entrenamiento de fuerza y resistencia con peso corporal.",
+    "duration": 45,
+    "price": 4500,
+    "category": "fuerza",
+    "available": true
+  },
+  {
+    "id": 3,
+    "name": "Trail Running",
+    "description": "Preparación física y técnica para correr en montaña.",
+    "duration": 90,
+    "price": 6000,
+    "category": "cardio",
+    "available": true
+  },
+  {
+    "id": 4,
+    "name": "Streching",
+    "description": "Recuperación activa y movilidad para runners.",
+    "duration": 30,
+    "price": 3000,
+    "category": "movilidad",
+    "available": true
+  }
+]

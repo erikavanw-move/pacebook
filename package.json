@@ -1,0 +1,13 @@
+{
+  "name": "pacebook-service-manager",
+  "version": "1.0.0",
+  "description": "Administrador de servicios para el sistema de turnos y reservas de Pacebook",
+  "type": "module",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
