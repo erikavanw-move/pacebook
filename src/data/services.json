@@ -4,7 +4,7 @@
     "name": "Running",
     "description": "Mejorá tu técnica de carrera con entrenadores especializados.",
     "duration": 60,
-    "price": 5500,
+    "price": 5000,
     "category": "cardio",
     "available": true
   },

@@ -1,7 +1,7 @@
 {
-  "name": "pacebook-service-manager",
+  "name": "backend-turnos-reservas",
   "version": "1.0.0",
-  "description": "Administrador de servicios para el sistema de turnos y reservas de Pacebook",
+  "description": "API de servicios para el sistema de turnos y reservas de Pacebook, con http nativo",
   "type": "module",
   "main": "src/app.js",
   "scripts": {
